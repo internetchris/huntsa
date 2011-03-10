@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Huntsa</title>
+  <%= stylesheet_link_tag :all, 'facebox.css' %>
+  <%= javascript_include_tag :defaults, 'jquery', 'rails', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js', "jquery.nivo.slider.pack", 'facebox.js' %>
+  <%= csrf_meta_tag %>
+</head>
+<body>
+  <script type="text/javascript">
+  $(window).load(function() {
+  	$('#slider').nivoSlider({
+  		effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
+  		slices:1,
+  		animSpeed:900, //Slide transition speed
+  		pauseTime:5000,
+  		startSlide:2, //Set starting Slide (0 index)
+  		directionNav:true, //Next & Prev
+  		directionNavHide:true, //Only show on hover
+  		controlNav:true, //1,2,3...
+  		controlNavThumbs:true, //Use thumbnails for Control Nav
+      controlNavThumbsFromRel:false, //Use image rel for thumbs
+  		controlNavThumbsSearch: '.jpg', //Replace this with...
+  		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+  		keyboardNav:true, //Use left & right arrows
+  		pauseOnHover:true, //Stop animation while hovering
+  		manualAdvance:false, //Force manual transitions
+  		captionOpacity:0.8, //Universal caption opacity
+  		beforeChange: function(){},
+  		afterChange: function(){},
+  		slideshowEnd: function(){} //Triggers after all slides have been shown
+  	});
+  });
+  
+  $.facebox.settings.closeImage = '/images/closelabel.png'
+  $.facebox.settings.loadingImage = '/images/loading.gif'
+  
+  </script>
+  
+   <div id="navigation">
+     <ul>
+       <li><%= link_to "Home", root_path %></li>
+       <li><%= link_to "The Ranch", ranch_path %></li>
+       <li><%= link_to "Trophy Room", trophy_room_path %></li>
+       <li><%= link_to "Hunts", ""%></li>
+       <li><%= link_to "Contact", ""%></li>
+     </ul>
+      <%=image_tag("logo.png")%>
+  </div>
+  <div class="header">
+    <div id="slider">
+      <%= image_tag("lion.png", :class => "header_image")%>
+      <%= image_tag("animal2.png", :class => "header_image")%>
+      <%= image_tag("animal3.png", :class => "header_image")%>
+      <%= image_tag("animal4.png", :class => "header_image")%>
+    </div>
+  </div>
+
+			
+ <div id="login">
+   <% if !current_user %>
+   <% form_tag user_sessions_path do |f| %>
+    Login:&nbsp;<%= text_field_tag :login %>&nbsp;Password:&nbsp;<%= password_field_tag :password %><%= submit_tag "Login" %>&nbsp;<%= link_to "(Register)", new_user_path %>
+   <% end %>
+    <% else %>
+     Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
+   <% end %>
+ </div>				
+	<div id="root">			
+				
+		<div id='contents'>
+		<%= yield %>
+    </div>
+		<div id='root_footer'></div>
+	
+<div id='footer'>
+<%=link_to "Civic Outreach", ""%> | <%=link_to "Our Mission", ""%> | <%=link_to "FAQ", ""%> 
+</div>
+
+<div id='footer_links'>
+
+</div>
+</body>
+</html>

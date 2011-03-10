@@ -1,0 +1,28 @@
+<div class="site_background">
+<h1>Trophy Room</h1>
+
+<p>Take a look around. All of these beautiful creatures were guided and shot by HuntSa staff and clients. We are proud to showcase these trophy animals and feel they deserve to be appreciated for a lifetime. All of the hunts and animals were found on the 40,000 acres available to our clients. We take pride in the animals our clients shoot and this is one of the ways we show it.</p>
+
+<p>As a client of ours you will have the opportunity to upload your own hunting pictures and tell everyone "your" story.</p>
+
+
+<div class="story_line">Your hunt, your story...</div>
+<%= link_to image_tag("upload_photo.png"), new_picture_path, :class => "upload_button" %>
+<br/>
+<br/>
+<div class="picture_container">
+<% @pictures.each do |picture| %>
+  <div class="trophy_picture">
+      <%= facebox_link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), :url => picture_path(picture.id), :method => :get %><br/>
+      <% if !picture.story.blank? %>
+      <span class="right"><%=facebox_link_to image_tag("story.png"), :url => story_path(picture.id), :method => :get %></span>
+      <% end %>
+      <span class="signature"><%= picture.user.name %>, <%= picture.user.from %></span><br/>
+      <span class="uploaded_date"><%= picture.created_at.strftime("%B, %d %Y")%></span>
+  </div>
+<% end %>
+<div class="clear"></div>
+<br/>
+</div>
+</div>
+

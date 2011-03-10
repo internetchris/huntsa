@@ -1,0 +1,11 @@
+<div class="site_background">
+<h1>Register</h1>
+<p class="orange" id="register_p">Registering with HuntSa allows you to upload hunting photos and tell others about your experience. Once you have registered, head over to the trophy room.</p>
+
+<% form_for @user, :url => account_path do |f| %>
+  <%= f.error_messages%>
+  <%= render :partial => "form", :object => f %>
+  <%= f.submit "Register" %>
+<% end %>
+
+</div>
