@@ -24,9 +24,9 @@
 <div class="picture_container">
 <% @pictures.each do |picture| %>
   <div class="trophy_picture">
-      <%= facebox_link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), :url => picture_path(picture.id), :method => :get %><br/>
+      <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), picture_path(picture.id), :method => :get, :id => "picturebox" %><br/>
       <% if !picture.story.blank? %>
-      <span class="right"><%=facebox_link_to image_tag("story.png"), :url => story_path(picture.id), :method => :get %></span>
+      <span class="right"><%=link_to image_tag("story.png"), story_path(picture.id), :method => :get, :id => "storybox", :title => "Your Hunt, Your Story" %></span>
       <% end %>
       <span class="signature"><%= picture.user.name %>, <%= picture.user.from %></span><br/>
       <span class="uploaded_date"><%= picture.created_at.strftime("%B, %d %Y")%></span>

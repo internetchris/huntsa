@@ -4,15 +4,6 @@
 <% form_for @picture, :html => { :multipart => true } do |form| %>
   <%= form.file_field :picture, :style => "color:white" %><br/><br/><br/>
   
-  <%= form.label "Date Shot:"%>
-  <%= form.text_field :date_shot %><br/>
-  
-  <%= form.label "Caliber:"%>
-  <%= form.text_field :caliber, :size => "8" %><br/>
-  
-  <%= form.label "World Record ?"%>
-   <%= form.check_box :record_book %><br/><br/>
-  
   <%= form.label "Brief Hunting Story"%><br/>
   <%= form.text_area :story, :size => "50x10" %><br/>
   <%= form.hidden_field :user_id, :value => current_user.id %>

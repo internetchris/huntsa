@@ -12,17 +12,11 @@ class MainController < ApplicationController
   
   def story
     @picture = Picture.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.js { render_to_facebox }
-    end
+    render :layout => false
   end
   
   def picture
     @picture = Picture.find(params[:id])
-    respond_to do |format|
-      format.html
-      format.js { render_to_facebox }
-    end
+    render :layout => false
   end
 end

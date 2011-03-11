@@ -2,8 +2,8 @@
 <html>
 <head>
   <title>Huntsa</title>
-  <%= stylesheet_link_tag :all, 'facebox.css' %>
-  <%= javascript_include_tag 'rails', 'jquery', 'facebox.js', "jquery.nivo.slider.pack", 'my_methods.js' %>
+  <%= stylesheet_link_tag :all, 'jquery.fancybox-1.3.4.css' %>
+  <%= javascript_include_tag 'rails', 'jquery-1.4.3.min.js', 'jquery.mousewheel-3.0.4.pack.js', 'jquery.fancybox-1.3.4.pack.js', "jquery.nivo.slider.pack", 'my_methods.js' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -31,6 +31,24 @@
   		slideshowEnd: function(){} //Triggers after all slides have been shown
   	});
   });
+  
+  $(document).ready(function() {
+    $("a#picturebox").fancybox({
+			'overlayShow'	: true,
+			'autoScale'   : true,
+			'transitionIn'	: 'elastic',
+			'transitionOut'	: 'elastic',
+			'opacity'		: true
+		});
+	  	$("a#storybox").fancybox({
+				'width'				: '25%',
+				'height'			: '25%',
+				'autoScale'			: false,
+				'transitionIn'		: 'elastic',
+				'transitionOut'		: 'elastic',
+				'type'				: 'iframe'
+			});
+		});
   
   
   </script>
