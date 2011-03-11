@@ -458,6 +458,12 @@ background-position:-700px -99px;
 	position:relative;
 }
 
+.edit_hunting_picture{
+	float: left;
+	margin-bottom: -45px;
+	position: relative;
+}
+
 .logged_in{
 	margin: 0 auto;
 	width:1200px;
@@ -466,6 +472,10 @@ background-position:-700px -99px;
 
 .logged_in a{
 	color:white;
+}
+
+.req{
+	color: red;
 }
 
 

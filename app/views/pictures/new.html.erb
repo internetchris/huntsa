@@ -1,13 +1,1 @@
-<div class="site_background">
-  <h1>Hunting Photo & Story</h1>
-  <%=image_tag "no_image.png", :class => "no_border"%>
-<% form_for @picture, :html => { :multipart => true } do |form| %>
-  <%= form.file_field :picture, :style => "color:white" %><br/><br/><br/>
-  
-  <%= form.label "Brief Hunting Story"%><br/>
-  <%= form.text_area :story, :size => "50x10" %><br/>
-  <%= form.hidden_field :user_id, :value => current_user.id %>
-  <hr/>
-  <%= form.submit "Save Picture" %>
-<% end %>
-</div>
+<%= render :partial => "form"%>
