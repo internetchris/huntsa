@@ -452,5 +452,10 @@ background-position:-700px -99px;
 	border: 3px solid gray;
 }
 
+.delete_picture{
+	float: right;
+	margin-bottom: -45px;
+	position:relative;
+}
 
 

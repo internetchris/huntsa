@@ -15,7 +15,7 @@ class MainController < ApplicationController
     render :layout => false
   end
   
-  def picture
+  def hunting_picture
     @picture = Picture.find(params[:id])
     render :layout => false
   end

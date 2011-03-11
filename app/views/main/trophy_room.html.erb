@@ -7,8 +7,6 @@
    <% form_tag user_sessions_path do |f| %>
     <div class="login_box"><span>Login:</span><span><%= text_field_tag :login %>&nbsp;Password:&nbsp;<%= password_field_tag :password %><%= submit_tag "Login" %></span></div>
    <% end %>
-    <% else %>
-     Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
    <% end %>
  </div>
 
@@ -24,12 +22,19 @@
 <div class="picture_container">
 <% @pictures.each do |picture| %>
   <div class="trophy_picture">
-      <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), picture_path(picture.id), :method => :get, :id => "picturebox" %><br/>
+    <% if current_user && current_user.id == picture.user_id %>
+    <span class="delete_picture">
+      <%= button_to "Remove", picture_path(picture.id), :confirm => "Are you Sure?", :method => :delete %>
+    </span>
+    <% end %>
+      <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), hunting_picture_path(picture.id), :method => :get, :id => "picturebox" %><br/>
+      
       <% if !picture.story.blank? %>
       <span class="right"><%=link_to image_tag("story.png"), story_path(picture.id), :method => :get, :id => "storybox", :title => "Your Hunt, Your Story" %></span>
       <% end %>
       <span class="signature"><%= picture.user.name %>, <%= picture.user.from %></span><br/>
       <span class="uploaded_date"><%= picture.created_at.strftime("%B, %d %Y")%></span>
+      
   </div>
 <% end %>
 <div class="clear"></div>

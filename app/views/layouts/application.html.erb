@@ -5,6 +5,7 @@
   <%= stylesheet_link_tag :all, 'jquery.fancybox-1.3.4.css' %>
   <%= javascript_include_tag 'rails', 'jquery-1.4.3.min.js', 'jquery.mousewheel-3.0.4.pack.js', 'jquery.fancybox-1.3.4.pack.js', "jquery.nivo.slider.pack", 'my_methods.js' %>
   <%= csrf_meta_tag %>
+  
 </head>
 <body>
   <script type="text/javascript">
@@ -15,14 +16,14 @@
   		animSpeed:900, //Slide transition speed
   		pauseTime:5000,
   		startSlide:2, //Set starting Slide (0 index)
-  		directionNav:true, //Next & Prev
-  		directionNavHide:true, //Only show on hover
-  		controlNav:true, //1,2,3...
-  		controlNavThumbs:true, //Use thumbnails for Control Nav
+  		directionNav:false, //Next & Prev
+  		directionNavHide:false, //Only show on hover
+  		controlNav:false, //1,2,3...
+  		controlNavThumbs:false, //Use thumbnails for Control Nav
       controlNavThumbsFromRel:false, //Use image rel for thumbs
   		controlNavThumbsSearch: '.jpg', //Replace this with...
   		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-  		keyboardNav:true, //Use left & right arrows
+  		keyboardNav:false, //Use left & right arrows
   		pauseOnHover:true, //Stop animation while hovering
   		manualAdvance:false, //Force manual transitions
   		captionOpacity:0.8, //Universal caption opacity
@@ -71,6 +72,9 @@
     </div>
   </div>
 
+  <% if current_user %>
+   Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
+   <% end %>
 			
 	<div id="root">			
 		 <% flash_messages %>

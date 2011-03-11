@@ -9,5 +9,17 @@ class PicturesController < ApplicationController
     @picture = Picture.create( params[:picture] )
     redirect_to trophy_room_path
   end
+  
+  def show
+    @picture = Picture.find(params[:id])
+  end
+  
+  def destroy
+    @picture = Picture.find(params[:id])
+    if @picture.destroy
+    flash[:notice] = "This picture has been removed"
+    end
+    redirect_to trophy_room_path
+  end
 
 end
