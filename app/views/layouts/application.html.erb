@@ -73,8 +73,8 @@
   </div>
 
   <% if current_user %>
-   Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
-   <% end %>
+  <div class="logged_in"> Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)</div>
+  <% end %>
 			
 	<div id="root">			
 		 <% flash_messages %>

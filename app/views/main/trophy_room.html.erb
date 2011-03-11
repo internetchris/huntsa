@@ -5,7 +5,7 @@
 <div id="login_box">
    <% if !current_user %>
    <% form_tag user_sessions_path do |f| %>
-    <div class="login_box"><span>Login:</span><span><%= text_field_tag :login %>&nbsp;Password:&nbsp;<%= password_field_tag :password %><%= submit_tag "Login" %></span></div>
+    <div class="login_box"><span>Login:</span><span><%= text_field_tag 'user_session[login]' %>&nbsp;Password:&nbsp;<%= password_field_tag 'user_session[password]'%><%= submit_tag "Login" %></span></div>
    <% end %>
    <% end %>
  </div>

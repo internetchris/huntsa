@@ -458,4 +458,14 @@ background-position:-700px -99px;
 	position:relative;
 }
 
+.logged_in{
+	margin: 0 auto;
+	width:1200px;
+	color:#db6c2a;	
+}
+
+.logged_in a{
+	color:white;
+}
+
 

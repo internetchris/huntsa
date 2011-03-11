@@ -10,7 +10,7 @@ class UserSessionsController < ApplicationController
     @user_session = UserSession.new(params[:user_session])
     if @user_session.save
       flash[:notice] = "Login successful!"
-      redirect_back_or_default account_url
+      redirect_to trophy_room_path
     else
       flash[:error] = "There was a problem logging you in."
       redirect_to trophy_room_path
