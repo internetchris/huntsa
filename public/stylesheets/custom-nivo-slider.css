@@ -7,6 +7,7 @@
 	position:relative;
 	background:#202834 url(/images/loading.gif) no-repeat 50% 50%;
 	z-index: -1;
+	height: 425px;
 
 }
 #slider img {

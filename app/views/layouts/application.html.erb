@@ -3,7 +3,7 @@
 <head>
   <title>Huntsa</title>
   <%= stylesheet_link_tag :all, 'facebox.css' %>
-  <%= javascript_include_tag :defaults, 'jquery', 'rails', 'http://ajax.googleapis.com/ajax/libs/jquery/1.4.1/jquery.min.js', "jquery.nivo.slider.pack", 'facebox.js' %>
+  <%= javascript_include_tag 'rails', 'jquery', 'facebox.js', "jquery.nivo.slider.pack", 'my_methods.js' %>
   <%= csrf_meta_tag %>
 </head>
 <body>
@@ -32,11 +32,8 @@
   	});
   });
   
-  $.facebox.settings.closeImage = '/images/closelabel.png'
-  $.facebox.settings.loadingImage = '/images/loading.gif'
   
   </script>
-  
    <div id="navigation">
      <ul>
        <li><%= link_to "Home", root_path %></li>
@@ -57,28 +54,14 @@
   </div>
 
 			
- <div id="login">
-   <% if !current_user %>
-   <% form_tag user_sessions_path do |f| %>
-    Login:&nbsp;<%= text_field_tag :login %>&nbsp;Password:&nbsp;<%= password_field_tag :password %><%= submit_tag "Login" %>&nbsp;<%= link_to "(Register)", new_user_path %>
-   <% end %>
-    <% else %>
-     Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
-   <% end %>
- </div>				
 	<div id="root">			
-				
+		 <% flash_messages %>
 		<div id='contents'>
 		<%= yield %>
     </div>
-		<div id='root_footer'></div>
 	
 <div id='footer'>
-<%=link_to "Civic Outreach", ""%> | <%=link_to "Our Mission", ""%> | <%=link_to "FAQ", ""%> 
-</div>
-
-<div id='footer_links'>
-
+<%=link_to "Civic Outreach", ""%> | <%=link_to "Our Mission", ""%> | <%=link_to "FAQ", ""%>
 </div>
 </body>
 </html>

@@ -18,8 +18,8 @@ class ApplicationController < ActionController::Base
     def require_user
       unless current_user
         store_location
-        flash[:notice] = "You must be logged in to access this page"
-        redirect_to login_url
+        flash[:notice] = "You must be logged in."
+        redirect_to trophy_room_path
         return false
       end
     end

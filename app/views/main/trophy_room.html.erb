@@ -1,6 +1,17 @@
 <div class="site_background">
 <h1>Trophy Room</h1>
 
+<p>To upload photos you must login or <strong><%= link_to "create an account", new_user_path, :class => 'orange' %></strong>.</p>
+<div id="login_box">
+   <% if !current_user %>
+   <% form_tag user_sessions_path do |f| %>
+    <div class="login_box"><span>Login:</span><span><%= text_field_tag :login %>&nbsp;Password:&nbsp;<%= password_field_tag :password %><%= submit_tag "Login" %></span></div>
+   <% end %>
+    <% else %>
+     Welcome&nbsp;<%= current_user.login %>!&nbsp;&nbsp;(<%=link_to "logout", logout_path %>)
+   <% end %>
+ </div>
+
 <p>Take a look around. All of these beautiful creatures were guided and shot by HuntSa staff and clients. We are proud to showcase these trophy animals and feel they deserve to be appreciated for a lifetime. All of the hunts and animals were found on the 40,000 acres available to our clients. We take pride in the animals our clients shoot and this is one of the ways we show it.</p>
 
 <p>As a client of ours you will have the opportunity to upload your own hunting pictures and tell everyone "your" story.</p>
