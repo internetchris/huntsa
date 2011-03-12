@@ -478,4 +478,20 @@ background-position:-700px -99px;
 	color: red;
 }
 
+.hunting_story{
+	padding: 10px;
+	color:#ffffff;
+	overflow-x: hidden;
+	width:375px;
+	height:375px;
+}
 
+.hunting_story h1{
+	font:40px papyrus,sans-serif;
+	color:#db6c2a;
+}
+
+.media{
+	margin-top:-70px;
+	border: 15px solid #000000;
+}

@@ -35,7 +35,7 @@ module Huntsa
 
     # Configure the default encoding used in templates for Ruby 1.9.
     config.encoding = "utf-8"
-
+    config.action_view.javascript_expansions[:defaults] = ['http://ajax.googleapis.com/ajax/libs/jquery/1.4/jquery.min.js', 'rails.js']
     # Configure sensitive parameters which will be filtered from the log file.
     config.filter_parameters += [:password]
   end

@@ -17,6 +17,10 @@
 
 <div class="story_line">Your hunt, your story...</div>
 <%= link_to image_tag("upload_photo.png"), new_picture_path, :class => "upload_button" %>
+<%= link_to image_tag ("gallery.png"), "#", :rel => "shadowbox[Hunting]" %>
+<% @pictures.each do |gallery| %>
+   <%= link_to image_tag ("gallery.png"), gallery.picture.url(:large), :rel => "shadowbox[Hunting]", :style => "display:none" %>
+<% end %>
 <br/>
 <br/>
 <div class="picture_container">
@@ -30,10 +34,10 @@
       <%= button_to "Edit", edit_picture_path(picture.id), :method => :get %>
     </span>
     <% end %>
-      <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), hunting_picture_path(picture.id), :method => :get, :id => "picturebox" %><br/>
+      <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), picture.picture.url(:large), :rel => "shadowbox" %><br/>
       
       <% if !picture.story.blank? %>
-      <span class="right"><%=link_to image_tag("story.png"), story_path(picture.id), :method => :get, :id => "storybox", :title => "Your Hunt, Your Story" %></span>
+      <span class="right"><a href="/story/<%=picture.id%>" rel="shadowbox;width=400;height=400"><%= image_tag("story.png") %></a></span>
       <% end %>
       <span class="signature"><% if !picture.shooter_name.blank? && !picture.shooter_place.blank? %><%= picture.shooter_name %>, <%= picture.shooter_place %><% end %></span><br/>
       <span class="uploaded_date"><%= picture.created_at.strftime("%B, %d %Y")%></span>
