@@ -15,7 +15,8 @@ class PicturesController < ApplicationController
   end
   
   def update
-    if Picture.update_attributes(params[:picture])
+    @picture = Picture.find(params[:id])
+    if @picture.update_attributes(params[:picture])
       flash[:notice] = 'Your picture was updated successfully'
     else
       flash[:error] = 'There was a problem updating your photo.'
