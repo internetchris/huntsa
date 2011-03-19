@@ -10,14 +10,14 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110311182746) do
+ActiveRecord::Schema.define(:version => 20110319163629) do
 
   create_table "pictures", :force => true do |t|
     t.string   "picture_file_name"
     t.string   "picture_content_type"
     t.integer  "picture_file_size"
     t.datetime "picture_updated_at"
-    t.string   "story"
+    t.text     "story",                :limit => 255
     t.string   "caliber"
     t.date     "date_shot"
     t.boolean  "record_book"
@@ -28,6 +28,8 @@ ActiveRecord::Schema.define(:version => 20110311182746) do
     t.datetime "updated_at"
     t.string   "shooter_name"
     t.string   "shooter_place"
+    t.string   "species"
+    t.boolean  "front_page"
   end
 
   create_table "user_sessions", :force => true do |t|

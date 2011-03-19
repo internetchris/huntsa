@@ -4,4 +4,17 @@ class Picture < ActiveRecord::Base
    
    validates_presence_of :shooter_name
    validates_presence_of :shooter_place
+   
+   def self.load_species
+     return @@species if defined?(@@species)
+
+     filename = Rails.root + "config/species.yml"
+     if File.exist?(filename)
+       @@species = yaml = YAML::load(File.open(filename))
+     else
+       @@species = ["Miscellaneous",]
+     end
+   end
+
+   SPECIES = load_species
 end

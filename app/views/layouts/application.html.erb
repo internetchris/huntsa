@@ -2,8 +2,9 @@
 <html>
 <head>
   <title>Huntsa</title>
-  <%= stylesheet_link_tag :all, 'shadowbox' %>
-  <%= javascript_include_tag :defaults, 'shadowbox', "jquery.nivo.slider.pack", 'my_methods' %>
+  
+  <%= stylesheet_link_tag :all, 'tabs', 'shadowbox' %>
+  <%= javascript_include_tag :defaults, 'jquery.tools.min', 'tabs', 'jquery.cycle.lite.min', 'shadowbox', "jquery.nivo.slider.pack", 'my_methods' %>
   <%= csrf_meta_tag %>
   
 </head>
@@ -34,6 +35,11 @@
   });
   
   Shadowbox.init();
+  
+  $(function() {
+      // setup ul.tabs to work as tabs for each div directly under div.panes
+      $("ul.tabs").tabs("div.panes > div");
+  });
   </script>
    <div id="navigation">
      <ul>

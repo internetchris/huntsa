@@ -8,6 +8,14 @@
 <% form_for @picture, :html => { :multipart => true } do |form| %>
   <%= form.file_field :picture, :style => "color:white" %><br/><br/><br/>
   
+  <% if current_user.login == "kuduhunter" || current_user.login == "internetchris" %>
+  <%= form.label "Species"%><br/>
+  <%= form.select(:species, Picture::SPECIES) %><br/><br/>
+  
+  <%= form.label "Display on Front Page?"%><br/>
+  <%= form.check_box :front_page %><br/><br/>
+  <% end %>
+  
   <%= form.label "Hunters Name"%><span class="req">*</span><br/>
   <%= form.text_field :shooter_name %><br/><br/>
   

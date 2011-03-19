@@ -1,10 +1,11 @@
 class MainController < ApplicationController
   
   def index
+    @pictures = Picture.find(:all, :conditions => {:front_page => true})
   end
   
   def trophy_room
-    @pictures = Picture.find(:all, :order => "created_at DESC")
+    @pictures = Picture.find(:all, :order => "created_at DESC", :conditions => {:front_page => false})
   end
   
   def ranch

@@ -492,6 +492,26 @@ background-position:-700px -99px;
 }
 
 .media{
-	margin-top:-70px;
-	border: 15px solid #000000;
+
+}
+
+.my_tabs{
+	margin: 10px;
+}
+
+.hunting_image{
+	
+}
+
+.hunting_images{
+	margin: 0 auto;
+	border: 10px solid #000000;	
+	background-color: #000000;
+	height: 220px;
+}
+
+.hunting_images h4{
+	font:15px papyrus,sans-serif;
+	margin-top:-5px;
+	margin-bottom: -5px;
 }
