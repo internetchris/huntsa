@@ -543,3 +543,16 @@ background-position:-700px -99px;
 #package1 h4{
 	
 }
+
+#hunting_details{
+	padding:10px;
+}
+
+#firearms{
+	color:#db6c2a;
+}
+
+#firearms a{
+	text-decoration: underline;
+	color: white;
+}
