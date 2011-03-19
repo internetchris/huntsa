@@ -9,7 +9,7 @@
   <% @pictures.each do |image| %>
    <span class="hunting_images"> 
      <h4><%= image.species %></h4>
-   <%= image_tag(image.picture.url(:thumb), :border => 0, :class => "hunting_image") %>
+   <%= link_to image_tag(image.picture.url(:thumb), :class => "hunting_image"), picture.picture.url(:large), :rel => "shadowbox" %>
    </span>
    
   <% end %>
