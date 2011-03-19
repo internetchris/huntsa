@@ -53,6 +53,7 @@ Huntsa::Application.routes.draw do
   match 'ranch' => 'main#ranch', :as => :ranch
   match 'story/:id' => 'main#story', :as => :story
   match 'hunting_picture/:id' => 'main#hunting_picture', :as => :hunting_picture
+  match 'hunting' => 'main#hunting', :as => :hunting
   
   get    'login(.:format)'  => 'user_sessions#new',     :as => :login
   post   'login(.:format)'  => 'user_sessions#create',  :as => :login

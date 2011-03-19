@@ -254,6 +254,10 @@ background-position:-700px -99px;
 	text-align:center;
 }
 
+#weclome h4{
+	text-align:center;
+}
+
 #services{
 	width:386px;
 	float:left;
@@ -511,4 +515,31 @@ background-position:-700px -99px;
 	font:15px papyrus,sans-serif;
 	margin-top:-5px;
 	margin-bottom: -5px;
+}
+
+#package1{
+	width:246px;
+	float:left;
+	color:white;
+	background-color:#262424;
+	margin:6px;
+	height:460px;
+	padding:20px;
+	
+
+}
+
+#package1 p{
+	padding:10px;
+	font: 14px arial,sans-serif;
+	color:#db6c2a;
+	margin-top:-30px;
+}
+
+#package1 h1{
+	text-align:center;
+}
+
+#package1 h4{
+	
 }
