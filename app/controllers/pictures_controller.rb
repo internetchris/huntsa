@@ -21,7 +21,7 @@ class PicturesController < ApplicationController
     else
       flash[:error] = 'There was a problem updating your photo.'
     end
-    redirect_to trophy_room_path
+    redirect_to trophy_room_path(:anchor => "page_anchor")
   end
     
   def show

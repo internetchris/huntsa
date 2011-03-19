@@ -1,4 +1,4 @@
-<div class="site_background">
+<div class="site_background", id="page_anchor">
 <h1>Trophy Room</h1>
 
 <p>To upload photos you must login or <strong><%= link_to "create an account", new_user_path, :class => 'orange' %></strong>.</p>
@@ -16,7 +16,7 @@
 
 
 <div class="story_line">Your hunt, your story...</div>
-<%= link_to image_tag("upload_photo.png"), new_picture_path, :class => "upload_button" %>
+<%= link_to image_tag("upload_photo.png"), new_picture_path(:anchor => "page_anchor"), :class => "upload_button" %>
 <%= link_to image_tag ("gallery.png"), "#", :rel => "shadowbox[Hunting]" %>
 <% @pictures.each do |gallery| %>
    <%= link_to image_tag ("gallery.png"), gallery.picture.url(:large), :rel => "shadowbox[Hunting]", :style => "display:none" %>
@@ -31,7 +31,7 @@
       <%= button_to "Remove", picture_path(picture.id), :confirm => "Are you Sure?", :method => :delete %>
     </span>
     <span class="edit_hunting_picture">
-      <%= button_to "Edit", edit_picture_path(picture.id), :method => :get %>
+      <%= button_to "Edit", edit_picture_path(:id => picture.id, :anchor => "page_anchor"), :method => :get %>
     </span>
     <% end %>
       <%= link_to image_tag(picture.picture.url(:thumb), :class => "t_picture"), picture.picture.url(:large), :rel => "shadowbox" %><br/>
