@@ -17,7 +17,7 @@
 
 <div class="story_line">Your hunt, your story...</div>
 <%= link_to image_tag("upload_photo.png"), new_picture_path(:anchor => "page_anchor"), :class => "upload_button" %>
-<%= link_to image_tag ("gallery.png"), "#", :rel => "shadowbox[Hunting]" %>
+<%= link_to image_tag ("gallery.png"), "/images/hunting_gallery.png", :rel => "shadowbox[Hunting]" %>
 <% @pictures.each do |gallery| %>
    <%= link_to image_tag ("gallery.png"), gallery.picture.url(:large), :rel => "shadowbox[Hunting]", :style => "display:none" %>
 <% end %>
