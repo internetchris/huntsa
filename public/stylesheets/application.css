@@ -561,3 +561,34 @@ background-position:-700px -99px;
 	text-decoration: underline;
 	color: white;
 }
+
+.profile{
+	background-color:#262424;
+	color:white;
+}
+
+.profile img{
+	float: left;
+	padding: 10px;
+}
+
+.profile p{
+	padding-top: 25px;
+}
+
+.profile h1{
+	font:25px papyrus,sans-serif;
+}
+
+.profile h2{
+	font:15px papyrus,sans-serif;
+	margin-top: -20px;
+}
+
+.profile ul{
+	list-style: none;
+}
+
+.profile ul a{
+     color:#db6c2a;
+}
