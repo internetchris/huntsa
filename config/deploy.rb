@@ -2,7 +2,7 @@
 #       Application
 #############################################################
 
-set :application, "viewdev.net"
+set :application, "huntsa.com"
 set :user, "internetchris"
 set :port, 31979
 set :use_sudo, true
