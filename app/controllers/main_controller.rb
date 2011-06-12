@@ -11,6 +11,9 @@ class MainController < ApplicationController
   def ranch
   end
   
+  def outreach
+  end
+  
   def story
     @picture = Picture.find(params[:id])
     render :layout => false

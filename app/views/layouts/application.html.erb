@@ -3,7 +3,9 @@
 <head>
   <title>Huntsa - Your South African Hunting Adventure!</title>
   
-  <%= stylesheet_link_tag :all, 'tabs', 'shadowbox' %>
+  <%= stylesheet_link_tag 'application', 'custom-nivo-slider', 'facebox', 'jquery.fancybox-1.3.4', 'nivo-slider', 'tabs', 'shadowbox' %>
+  <!--[if gte IE 7]><link href="/stylesheets/ie_fix.css" media="screen" rel="stylesheet" type="text/css" />
+  <![endif]-->
   <%= javascript_include_tag :defaults, 'jquery.tools.min', 'tabs', 'jquery.cycle.lite.min', 'shadowbox', "jquery.nivo.slider.pack", 'my_methods' %>
   <%= csrf_meta_tag %>
   
@@ -12,25 +14,26 @@
   <script type="text/javascript">
   $(window).load(function() {
   	$('#slider').nivoSlider({
-  		effect:'fade', //Specify sets like: 'fold,fade,sliceDown'
-  		slices:1,
-  		animSpeed:900, //Slide transition speed
-  		pauseTime:5000,
-  		startSlide:2, //Set starting Slide (0 index)
-  		directionNav:false, //Next & Prev
-  		directionNavHide:false, //Only show on hover
-  		controlNav:false, //1,2,3...
-  		controlNavThumbs:false, //Use thumbnails for Control Nav
-      controlNavThumbsFromRel:false, //Use image rel for thumbs
-  		controlNavThumbsSearch: '.jpg', //Replace this with...
-  		controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-  		keyboardNav:false, //Use left & right arrows
-  		pauseOnHover:true, //Stop animation while hovering
-  		manualAdvance:false, //Force manual transitions
-  		captionOpacity:0.8, //Universal caption opacity
-  		beforeChange: function(){},
-  		afterChange: function(){},
-  		slideshowEnd: function(){} //Triggers after all slides have been shown
+  		effect:'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'    
+
+          slices:20,
+          animSpeed:500,
+          pauseTime:3000,
+          startSlide:0, //Set starting Slide (0 index)
+          directionNav:false, //Next & Prev
+          directionNavHide:false, //Only show on hover
+          controlNav:true, //1,2,3...
+          controlNavThumbs:false, //Use thumbnails for Control Nav
+          controlNavThumbsFromRel:false, //Use image rel for thumbs
+          controlNavThumbsSearch: '.jpg', //Replace this with...
+          controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
+          keyboardNav:true, //Use left & right arrows
+          pauseOnHover:true, //Stop animation while hovering
+          manualAdvance:false, //Force manual transitions
+          captionOpacity:0.8, //Universal caption opacity
+          beforeChange: function(){},
+          afterChange: function(){},
+          slideshowEnd: function(){} //Triggers after all slides have been shown
   	});
   });
   
@@ -44,10 +47,11 @@
    <div id="navigation">
      <ul>
        <li><%= link_to "Home", root_path %></li>
-       <li><%= link_to "The Ranch", ranch_path(:anchor => "page_anchor") %></li>
-       <li><%= link_to "Trophy Room", trophy_room_path(:anchor => "page_anchor" ) %></li>
-       <li><%= link_to "Hunts", hunting_path(:anchor => "page_anchor") %></li>
-       <li><%= link_to "Contact", contact_path(:anchor => "page_anchor") %></li>
+       <li><%= link_to "The Ranch", ranch_path %></li>
+       <li><%= link_to "Trophy Room", trophy_room_path %></li>
+       <li><%= link_to "Hunts", hunting_path %></li>
+       <li><%= link_to "Outreach", outreach_path %></li>
+       <li><%= link_to "Contact", contact_path %></li>
      </ul>
       <%=image_tag("logo.png")%>
   </div>
@@ -56,7 +60,9 @@
       <%= image_tag("lion.png", :class => "header_image")%>
       <%= image_tag("animal2.png", :class => "header_image")%>
       <%= image_tag("animal3.png", :class => "header_image")%>
+      <%= image_tag("kudu.png", :class => "header_image")%>
       <%= image_tag("animal4.png", :class => "header_image")%>
+      <%= image_tag("warthog.png", :class => "header_image")%>
     </div>
   </div>
 

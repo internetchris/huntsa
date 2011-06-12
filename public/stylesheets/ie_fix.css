@@ -1,0 +1,14 @@
+#navigation ul{
+	position:relative;
+	float:right;
+	list-style:none;
+	margin-right:150px;
+	margin-left: -330px;
+	margin-top:185px;
+}
+
+#navigation li{
+	font:30px papyrus,sans-serif;
+	color:#db6c2a;
+	margin-top: 0px;
+}
