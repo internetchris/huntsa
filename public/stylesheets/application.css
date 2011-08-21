@@ -625,6 +625,10 @@ background-position:-700px -99px;
 	margin-bottom: 15px;
 }
 
+#outreach_opp li a{
+  color: #db6c2a;
+}
+
 #outreach_p{
 	background-color: #282626;
 	border: 5px solid #565454;
