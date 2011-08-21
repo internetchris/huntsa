@@ -26,7 +26,7 @@
 <div class="picture_container">
 <% @pictures.each do |picture| %>
   <div class="trophy_picture">
-    <% if current_user && (current_user.id == picture.user_id  || current_user.login == "kuduhunter") %>
+    <% if current_user && (current_user.id == picture.user_id  || current_user.login == "kuduhunter" || current_user.login == "internetchris") %>
     <span class="delete_picture">
       <%= button_to "Remove", picture_path(picture.id), :confirm => "Are you Sure?", :method => :delete %>
     </span>
