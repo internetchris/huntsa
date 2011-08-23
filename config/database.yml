@@ -20,19 +20,3 @@ production:
   database: db/production.sqlite3
   pool: 5
   timeout: 5000
-
-
-  # base: &base
-  #       adapter: mysql
-  #       encoding: utf8
-  #       username: root
-  # 
-  #     production:
-  #       database: huntsa
-  #       <<: *base
-  #       password: oht=1fcj
-  # 
-  #     development:
-  #       database: huntsa_dev
-  #       <<: *base
-  #       password:
