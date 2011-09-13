@@ -447,7 +447,10 @@ background-position:-700px -99px;
 .uploaded_date{
 	font-size:12px;
 	margin-left:10px;
-	color:black;
+	color:white;
+	margin-top: -20px;
+	margin-bottom: 10px;
+	margin-left: 15px;
 }
 
 .lightbox{
