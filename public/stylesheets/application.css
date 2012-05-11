@@ -489,7 +489,7 @@ background-position:-700px -99px;
 	padding: 10px;
 	color:#ffffff;
 	overflow-x: hidden;
-	width:375px;
+	width:575px;
 	height:375px;
 }
 
@@ -628,7 +628,7 @@ background-position:-700px -99px;
 	margin-bottom: 15px;
 }
 
-#outreach_opp li a{
+#outreach_opp a{
   color: #db6c2a;
 }
 
