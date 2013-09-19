@@ -640,5 +640,26 @@ background-position:-700px -99px;
     width: 400px;
     margin-left:225px;
     padding: 15px;
-    margin-top: 5px;
+
+}
+
+.facebook-button{
+	position: absolute;
+	top: 360px;
+	left: 870px;
+	width: 30px;
+	height: 30px;
+	z-index: 99999;
+	border-radius: 5px;
+	color: #ffffff;
+	text-align: center;
+}
+
+.iframe{
+	width: 1120px;
+	height: 1000px;
+	position: absolute;
+	margin-left: -100px;
+	border: none;
+	
 }
