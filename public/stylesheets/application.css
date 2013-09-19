@@ -645,14 +645,9 @@ background-position:-700px -99px;
 
 .facebook-button{
 	position: absolute;
-	top: 360px;
-	left: 870px;
-	width: 30px;
-	height: 30px;
-	z-index: 99999;
-	border-radius: 5px;
-	color: #ffffff;
-	text-align: center;
+	left: 300px;
+	bottom: -40px;
+	top: 20px;
 }
 
 .iframe{
