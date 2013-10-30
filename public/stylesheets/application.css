@@ -523,13 +523,41 @@ background-position:-700px -99px;
 #package1{
 	width:246px;
 	float:left;
+	height: 900px;
 	color:white;
 	background-color:#262424;
 	margin:6px;
-	height:460px;
 	padding:20px;
 	
 
+}
+
+.hunting-information{
+	float: right;
+	text-align: center;
+	margin-right: 100px;
+	border: 5px solid black;
+	background-color:#bdbdbd;
+	height: 900px;
+	padding: 15px;
+}
+
+.hunting-information a{
+	display: block;
+	width: 200px;
+	height: 50px;
+	border-radius: 5px;
+	color: #ffffff;
+	background-color: #262424;
+	padding: 5px;
+	line-height: 52px;
+	font-size: 28px;
+	text-decoration: none;
+	margin: 0 auto;
+}
+
+.hunting-information a:hover{
+	background-color: #db6c2a;
 }
 
 #package1 p{

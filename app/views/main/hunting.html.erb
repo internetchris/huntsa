@@ -1,106 +1,31 @@
 <div id="page_anchor">
 <div id="main_page">
-  <div id="package1">
-    <h1>Package 1</h1>
-    <h4>7 DAYS HUNTING</h4>
-    <p>$4400 as per pricelist </p>
-    <ul>
-      <li>1 Bushbuck</li>
-      <li>1 Springbuck</li>
-      <li>1 Duiker</li>
-      <li>1 Kudu</li>
-      <li>1 Blesbuck</li>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
-       <%= link_to "2012/2013 Price List & Terms", "/docs/HuntSA_PriceList.pdf ", :class => 'price_list', :target => "blank"  %><br/>
-       <br/>
-     </ul>  
+  
+  <div class="hunting-information">
+    <h1>Pricing and Hunting Package Details</h1>
+    
+    <iframe src="http://docs.google.com/gview?url=http://huntsa.com/docs/HuntSA_PriceList.pdf&embedded=true" style="width:718px; height:700px;" frameborder="0"></iframe>
+    <br/>
+    <a href="/docs/HuntSA_PriceList.pdf " class="price_list" target="blank">Download</a>
     
   </div>
   
   <div id="package1">
-    <h1>Package 2</h1>
-    <h4>10 DAYS HUNTING</h4>
-    <p>$6500 as per pricelist </p>
-    <ul>
-      <li>1 Kudu</li>
-      <li>1 Impala</li>
-      <li>1 Bushbuck</li>
-      <li>1 Springbuck</li>
-      <li>1 Blesbuck</li>
-      <li>1 Blue/Black Wildebeest</li>
-      <li>1 Mountain Reedbuck</li>
-      <br/>
-      <br/>
-       <%= link_to "2012/2013 Price List & Terms", "/docs/HuntSA_PriceList.pdf ", :class => 'price_list', :target => "blank"  %><br/>
-       <br/>
-     </ul>  
-   
-  </div>
-  
-  <div id="package1">
-    <h1>Package 3</h1>
-    <h4>10 DAYS HUNTING</h4>
-    <p>$7200 as per pricelist </p>
-    <ul>
-      <li>1 Kudu</li>
-      <li>1 Gemsbuck</li>
-      <li>1 Mountain Reedbuck</li>
-      <li>1 Black or Blue Wildebeest</li>
-      <li>1 Duiker</li>
-      <li>1 Bushbuck</li>
-      <li>1 Springbuck</li>
-      <li>1 Steenbuck</li>
-      <br/>
-       <%= link_to "2012/2013 Price List & Terms", "/docs/HuntSA_PriceList.pdf ", :class => 'price_list', :target => "blank"  %><br/>
-       <br/>
-      
-     </ul>  
-    
-  </div>
-  
-  <div id="package1">
-     <h1 style="font-size:30px">Family Member or Buddy Special</h1>
-     <h4 style="font-size: 12px">7 DAYS HUNTING & 2 DAYS TOURISM</h4>
-     <br/>
-     <p>$7400 as per pricelist (Price per 2 hunters,Free rifle hire, Share bedroom, rifle, vehicle)</p>
-     <ul>
-       <li>2 Kudu</li> 
-       <li>2 springbuck</li>
-       <li>2 Blesbuck</li>
-       <li>2 duiker</li>
-       <li>2 warthog</li>
-       <br/>
-       <br/>
-       <%= link_to "2012/2013 Price List & Terms", "/docs/HuntSA_PriceList.pdf ", :class => 'price_list', :target => "blank" %><br/>
-       <br/>
-      
-       
+    <h1>Hunting Information</h1>
+    <h3>Ideal caliber's & Information</h3> 
+  <ul>
+    <li>.270 Winchester to .300 Magnum range</li>
+    <li>Arms supplied on request</li>
+    <li>Premium grade ammunition recommended</li>
+    <li>Firearms rental $30 per day and $2 per bullet </li>
+  </ul>
 
-      </ul>  
-     
-   </div>
-    
-     <div class="clear"></div> 
+  <h3> Transporting Firearms</h3>
+  <p id="firearms">Visitors bringing firearms into South Africa for hunting purposes will be asked to fill in a <%= link_to "SAP 520", "/docs/importation.pdf", :target => "blank" %>. We would strongly recommend filling in this form beforehand and that you contact us for assistance to ensure it is completed correctly. This will save processing time at the Police Office. Guidelines and more detailed information can be found in <%= link_to "Importation of Firearms", "/docs/importation.pdf", :target => "blank" %>. </p>
+  <p id="firearms">For your convenience we have also linked to the <%= link_to "USA CUSTOMS 4459 document", "/docs/usa_customs.pdf" %>.
+  <p>IT IS VERY IMPORTANT TO FAMILIARIZE YOURSELF WITH THE CONTENTS.</p>
+  </div>  
+  <div class="clear"></div> 
 </div>
 </div>
 
-<div class="site_background">
-  <div id="hunting_details">
-  <h3>Ideal caliber's & Information</h3> 
-<ul>
-  <li>.270 Winchester to .300 Magnum range</li>
-  <li>Arms supplied on request</li>
-  <li>Premium grade ammunition recommended</li>
-  <li>Firearms rental $30 per day and $2 per bullet </li>
-</ul>
-
-<h3> Transporting Firearms</h3>
-<p id="firearms">Visitors bringing firearms into South Africa for hunting purposes will be asked to fill in a <%= link_to "SAP 520", "/docs/importation.pdf", :target => "blank" %>. We would strongly recommend filling in this form beforehand and that you contact us for assistance to ensure it is completed correctly. This will save processing time at the Police Office. Guidelines and more detailed information can be found in <%= link_to "Importation of Firearms", "/docs/importation.pdf", :target => "blank" %>. </p>
-<p id="firearms">For your convenience we have also linked to the <%= link_to "USA CUSTOMS 4459 document", "/docs/usa_customs.pdf" %>.
-<p>IT IS VERY IMPORTANT TO FAMILIARIZE YOURSELF WITH THE CONTENTS.</p> 
-  </div>
-  
-</div>
