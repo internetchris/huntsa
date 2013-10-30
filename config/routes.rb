@@ -56,6 +56,7 @@ Huntsa::Application.routes.draw do
   match 'hunting' => 'main#hunting', :as => :hunting
   match 'contact' => 'main#contact', :as => :contact
   match 'outreach' => 'main#outreach', :as => :outreach
+  match 'packages' => 'main#packages', :as => :package
   
   get    'login(.:format)'  => 'user_sessions#new',     :as => :login
   post   'login(.:format)'  => 'user_sessions#create',  :as => :login
