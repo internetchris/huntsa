@@ -22,7 +22,8 @@
       $("ul.tabs").tabs("div.panes > div");
   });
   </script>
-   <div id="navigation">
+  <div class="header">
+    <div id="navigation">
      <ul>
        <li><%= link_to "Home", root_path %></li>
        <li><%= link_to "Contact", contact_path %></li>
@@ -33,7 +34,6 @@
        <li class="facebook"><%= link_to "Follow us on Facebook", "https://www.facebook.com/pages/HuntSA/262707297095847", :target => "blank" %></li>
      </ul>
   </div>
-  <div class="header">
       <%= image_tag("banner.png", :class => "header_image")%>
   </div>
 
