@@ -13,31 +13,8 @@
 <body>
 
   <script type="text/javascript">
-  $(document).ready(function() {
-  	$('#slider').nivoSlider({
-  		effect:'fade', //Specify sets like: 'fold,fade,sliceDown, sliceDownLeft, sliceUp, sliceUpLeft, sliceUpDown, sliceUpDownLeft'    
-
-          slices:20,
-          animSpeed:500,
-          pauseTime:3000,
-          startSlide:0, //Set starting Slide (0 index)
-          directionNav:false, //Next & Prev
-          directionNavHide:false, //Only show on hover
-          controlNav:true, //1,2,3...
-          controlNavThumbs:false, //Use thumbnails for Control Nav
-          controlNavThumbsFromRel:false, //Use image rel for thumbs
-          controlNavThumbsSearch: '.jpg', //Replace this with...
-          controlNavThumbsReplace: '_thumb.jpg', //...this in thumb Image src
-          keyboardNav:true, //Use left & right arrows
-          pauseOnHover:true, //Stop animation while hovering
-          manualAdvance:false, //Force manual transitions
-          captionOpacity:0.8, //Universal caption opacity
-          beforeChange: function(){},
-          afterChange: function(){},
-          slideshowEnd: function(){} //Triggers after all slides have been shown
-  	});
-  });
   
+
   Shadowbox.init();
   
   $(function() {
@@ -46,28 +23,18 @@
   });
   </script>
    <div id="navigation">
-     
      <ul>
        <li><%= link_to "Home", root_path %></li>
+       <li><%= link_to "Contact", contact_path %></li>
        <li><%= link_to "The Ranch", ranch_path %></li>
        <li><%= link_to "Trophy Room", trophy_room_path %></li>
        <li><%= link_to "Pricing", hunting_path %></li>
        <li><%= link_to "Outreach", outreach_path %></li>
-       <li><%= link_to "Contact", contact_path %></li>
-      
+       <li class="facebook"><%= link_to "Follow us on Facebook", "https://www.facebook.com/pages/HuntSA/262707297095847", :target => "blank" %></li>
      </ul>
-      <%=image_tag("logo.png")%>
   </div>
   <div class="header">
-    <div id="slider">
-      <%= image_tag("lion.png", :class => "header_image")%>
-      <%= image_tag("animal2.png", :class => "header_image")%>
-      <%= image_tag("animal3.png", :class => "header_image")%>
-      <%= image_tag("kudu.png", :class => "header_image")%>
-      <%= image_tag("animal4.png", :class => "header_image")%>
-      <%= image_tag("warthog.png", :class => "header_image")%>
-        
-    </div>
+      <%= image_tag("banner.png", :class => "header_image")%>
   </div>
 
   <% if current_user %>

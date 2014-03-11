@@ -25,17 +25,17 @@ img{
 }
 
 .header img{
-	height:450px;
-	width:1350px;
-
+	width:859px;
+	position: absolute;
+	margin-top: 25px;
+	margin-left: -8px;
 }
 
 #navigation{
 	position:relative;
 	float:right;
-
-	
-
+	margin-top: -163px;
+	margin-right: -15px;
 }
 
 a {
@@ -78,7 +78,7 @@ h1 {
     width:1200px;
     color:#000000;
     background-color:#595858;
-    margin:10px auto 0px;
+    margin:-73px auto 0px;
 }
 
 .phone{
@@ -320,12 +320,12 @@ background-position:-700px -99px;
 	float:right;
 	list-style:none;
 	margin-right:150px;
-	margin-left: -330px;
+	margin-left: -325px;
 	margin-top:185px;
 }
 
 #navigation li{
-	font:30px papyrus,sans-serif;
+	font:34px papyrus,sans-serif;
 	color:#db6c2a;
 	margin-top:-7px;
 }
@@ -718,11 +718,14 @@ background-position:-700px -99px;
 
 }
 
-.facebook-button{
-	position: absolute;
-	left: 300px;
-	bottom: -40px;
-	top: 20px;
+#navigation .facebook{
+	margin-top: -20px;
+	color: #ffffff;
+}
+
+#navigation .facebook a{
+	font-size: 20px;
+	color: #ffffff;
 }
 
 .iframe{
